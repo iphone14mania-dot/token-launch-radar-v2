@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar — launchfit-1</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span><h1>TOKEN LAUNCH RADAR</h1><span class="model">launchfit-1</span></div>
+  <p class="tag">Every pre-token protocol, priced by a model fitted on the traded tokens and tested held-out twice.</p>
+  <nav class="views">
+    <button data-view="board" class="on">Board</button>
+    <button data-view="trades">Token trades</button>
+    <button data-view="aside">Set aside</button>
+    <button data-view="method">Method &amp; tests</button>
+  </nav>
+</header>
+<main>
+  <section id="kpis" class="kpis"></section>
+  <section id="formula" class="formula"></section>
+  <section id="ledger" class="ledger"></section>
+  <section id="integrity" class="integrity"></section>
+  <section id="view-board" class="view">
+    <div id="controls" class="controls"></div>
+    <div id="evidence-line" class="evidence-line"></div>
+    <div class="table-wrap"><table id="board-table" class="board"></table></div>
+    <p class="note">Implied value = value if a token launches × odds it ever records one. Click a row for the derivation and farm plan.</p>
+  </section>
+  <section id="view-detail" class="view" hidden></section>
+  <section id="view-trades" class="view" hidden>
+    <h2>Token trades — the 92 priced comps</h2>
+    <p class="note">Every token-bearing protocol with a usable market cap that passes the watchlist rule. The size curve and category effects are fitted on these, and only these.</p>
+    <div id="scatter"></div>
+    <div class="table-wrap"><table id="trades-table" class="board"></table></div>
+  </section>
+  <section id="view-aside" class="view" hidden>
+    <h2>Set aside — 141 pre-token protocols, each with a reason</h2>
+    <p class="note">The watchlist rule sets these aside: bridges, liquid staking, exchange custody, versioned listings, wrapped or staked by name. Accounted for here, not hidden.</p>
+    <div class="table-wrap"><table id="aside-table" class="board"></table></div>
+  </section>
+  <section id="view-method" class="view" hidden></section>
+</main>
+<footer>
+  <p>Source: DefiLlama protocols snapshot, <span id="asof"></span>. “Records no token” is DefiLlama's record, never proof a protocol has none. No live prices: the board is priced from the sealed snapshot only.</p>
+  <p>Built by an AI agent for make.fun's “Build the best token launch radar” bounty.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
